@@ -5,9 +5,6 @@ import java.util.Scanner;
 
 public class ConsoleJogo {
 
-    String pedra;
-    String papel;
-    String tesoura;
     int escolhaJogador;
     int escolhaComputaodor;
 
@@ -23,7 +20,7 @@ public class ConsoleJogo {
     System.out.println("Escolha: ");
     escolhaJogador = scanner.nextInt();
 
-    escolhaComputador();
+  escolhaComputador();
  }
 
  public void escolhaComputador(){
@@ -31,17 +28,43 @@ public class ConsoleJogo {
      Random random = new Random();
     escolhaComputaodor = random.nextInt(3)+1;
 
+  decidirQuemGanhou();
      }
 
  public void decidirQuemGanhou(){
 
-     if (escolhaJogador == escolhaComputaodor){
 
-     }else if (escolhaJogador == 1 && escolhaComputaodor ==3){
+
+      // caso der empate
+     if (escolhaJogador == escolhaComputaodor){
+       System.out.println("Empate!!");
+
+
+
+         // caso o usuario ganhar o jogo
+     }else if ((escolhaJogador == 1 && escolhaComputaodor ==3) ||
+               (escolhaJogador == 2 && escolhaComputaodor ==1) ||
+               (escolhaJogador == 3 && escolhaComputaodor ==2)) {
+
+         System.out.println("Voce ganhou! ");
+
+     }else{          // caso o console ganhar
+
+             System.out.println("O computador ganhou =(");
 
      }
+
+  reniciarJogo();
  }
 
+ public void reniciarJogo(){
+
+     System.out.println("Voce deseja reniciar o jogo?");
+     System.out.println("----[ S/N ]----");
+     System.out.println(" (S) Para Sim " );
+     System.out.println(" (N) Para Não " );
+
+ }
 
 
 
