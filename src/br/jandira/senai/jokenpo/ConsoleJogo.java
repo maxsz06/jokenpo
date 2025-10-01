@@ -57,17 +57,29 @@ public class ConsoleJogo {
   reniciarJogo();
  }
 
- public void reniciarJogo(){
+ public void reniciarJogo() {
+
+     String escolha;
+
+     Scanner reniciar = new Scanner(System.in);
 
      System.out.println("Voce deseja reniciar o jogo?");
      System.out.println("----[ S/N ]----");
-     System.out.println(" (S) Para Sim " );
-     System.out.println(" (N) Para Não " );
+     System.out.println(" (S) Para Sim ");
+     System.out.println(" (N) Para Não ");
+     escolha = reniciar.nextLine();
+
+     if (escolha.equals("S")) {
+
+         escolhaUsuario();
+
+     } else {
+
+         System.out.println("Obrigado!");
+     }
+
 
  }
-
-
-
 
 }
 

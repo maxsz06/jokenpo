@@ -1,5 +1,7 @@
 package br.jandira.senai.jokenpo;
 
+import java.util.Scanner;
+
 public class JogosApp {
 
     public static void main(String[] args) {
@@ -10,4 +12,5 @@ public class JogosApp {
         ConsoleJogo consoleJogo = new ConsoleJogo();
         consoleJogo.escolhaUsuario();
     }
+
 }
